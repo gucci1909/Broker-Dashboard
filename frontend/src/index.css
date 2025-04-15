@@ -12,3 +12,27 @@
     left: calc(100% + 100px);
   }
 }
+
+/* For RTL languages */
+[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+[dir="rtl"] .rtl-scroll {
+  direction: rtl;
+  overflow-y: auto;
+}
+
+[dir="rtl"] .rtl-scroll > * {
+  direction: ltr;
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}

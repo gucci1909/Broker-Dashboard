@@ -80,6 +80,271 @@ function BarGraphs() {
           <div className="font-bold">19 deals</div>
         </div>
       </div>
+
+      {/* User Feedback Section */}
+      <div className="mt-6">
+        <h3 className="mb-3 text-sm font-semibold text-gray-800">
+          User Feedback
+        </h3>
+        <div className="h-[300px] overflow-y-auto rounded-lg border border-gray-100 p-2">
+          {[
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Emma Williams",
+              role: "Account Executive",
+              comment:
+                "Would love to see more customization options in future updates.",
+              rating: 4,
+              avatar: "👩‍🎨",
+              color: "bg-pink-100 text-pink-800",
+            },
+            {
+              name: "David Kim",
+              role: "VP of Sales",
+              comment: "Game changer for our quarterly planning process.",
+              rating: 5,
+              avatar: "👨‍💼",
+              color: "bg-green-100 text-green-800",
+            },
+            {
+              name: "Olivia Martinez",
+              role: "Sales Operations",
+              comment:
+                "The real-time data sync is flawless. No more manual updates!",
+              rating: 5,
+              avatar: "👩‍🔧",
+              color: "bg-yellow-100 text-yellow-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+            {
+              name: "Sarah Johnson",
+              role: "Sales Manager",
+              comment:
+                "The new dashboard helped us increase conversion by 22%!",
+              rating: 5,
+              avatar: "👩‍💼",
+              color: "bg-purple-100 text-purple-800",
+            },
+            {
+              name: "Michael Chen",
+              role: "Marketing Director",
+              comment:
+                "Very intuitive interface. Our team adopted it immediately.",
+              rating: 4,
+              avatar: "👨‍💻",
+              color: "bg-blue-100 text-blue-800",
+            },
+          ].map((feedback, index) => (
+            <div
+              key={index}
+              className={`mb-3 flex items-start rounded-lg p-3 ${feedback.color}`}
+            >
+              <div className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-lg">
+                {feedback.avatar}
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h4 className="text-sm font-medium">{feedback.name}</h4>
+                    <p className="text-xs opacity-75">{feedback.role}</p>
+                  </div>
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className={`h-3 w-3 ${i < feedback.rating ? "text-yellow-500" : "text-gray-300"}`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="mt-1 text-xs">{feedback.comment}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

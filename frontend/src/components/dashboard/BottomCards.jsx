@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBuilding, FaBullseye, FaCalendarAlt, FaChartLine, FaDollarSign, FaHandshake, FaUsers } from "react-icons/fa";
+import { FaBuilding, FaBullseye, FaCalendarAlt, FaChartLine, FaDollarSign, FaHandshake, FaMoneyBillAlt, FaUsers } from "react-icons/fa";
 
 function BottomCards() {
   const stats = [
@@ -58,9 +58,10 @@ function BottomCards() {
       textColor: "text-green-600",
     },
     {
-      icon: <FaDollarSign />,
+      icon: <FaMoneyBillAlt  />,
       label: "Revenue",
-      value: "$12.3k",
+      value: "45.2k",
+      
       trend: "+23%",
       color: "bg-purple-100",
       textColor: "text-purple-600",
@@ -93,7 +94,7 @@ function BottomCards() {
                 {s.value}
                 {s.label === "Revenue" && (
                   <span className="ml-1 text-sm font-normal text-gray-500">
-                    USD
+                    AED
                   </span>
                 )}
               </h3>
