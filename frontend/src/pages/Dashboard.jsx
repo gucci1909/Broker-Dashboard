@@ -43,7 +43,7 @@ ChartJS.register(
 );
 
 const Home = () => {
-  const { t, i18n } = useTranslation(); // Assuming you're using react-i18next
+  const { t, i18n } = useTranslation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isTimeframeOpen, setIsTimeframeOpen] = useState(false);
@@ -56,13 +56,12 @@ const Home = () => {
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
-  // RTL/LTR direction classes
   const dir = i18n.language === "ar" ? "rtl" : "ltr";
   const isRTL = dir === "rtl";
 
   return (
     <div
-      className={`flex min-h-screen bg-gradient-to-br from-white to-blue-50 px-4 ${isRTL ? 'font-arabic' : 'font-sans'} text-gray-800 ${dir}`}
+      className={`flex min-h-screen bg-gradient-to-br from-white to-blue-50 px-4 ${isRTL ? "font-arabic" : "font-sans"} text-gray-800 ${dir}`}
       dir={dir}
     >
       <Sidebar
@@ -86,7 +85,7 @@ const Home = () => {
                 <FaBars />
               </button>
               <h1 className="text-xl font-bold text-gray-800 md:text-2xl">
-                {t("welcome_message", { name: "Mohamed" })}
+                {t("welcome_message", { name: "Arjun" })}
               </h1>
               <div className="flex items-center justify-end gap-2">
                 <label className="relative inline-flex cursor-pointer items-center">
@@ -154,7 +153,7 @@ const Home = () => {
                     <p className="text-sm font-medium text-gray-900">
                       {t("signed_in_as")}
                     </p>
-                    <p className="text-xs text-gray-500">mohamed@broker.com</p>
+                    <p className="text-xs text-gray-500">arjun@broker.com</p>
                   </div>
                   <a
                     href="#"
@@ -263,19 +262,19 @@ const Home = () => {
 
               {/* Right Side - Action Buttons */}
               <div className="flex flex-wrap gap-3">
-                <button className="flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition-all hover:bg-gray-50 hover:shadow-md">
+                <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition-all hover:bg-gray-50 hover:shadow-md">
                   <FaFilter className="text-gray-500" />
                   {t("filters")}
                 </button>
 
-                <button className="flex items-center gap-2 rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 transition-all hover:bg-blue-100 hover:shadow-md">
+                <button className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600 transition-all hover:bg-blue-100 hover:shadow-md">
                   <FaFileExport className="text-blue-500" />
                   {t("export")}
                 </button>
 
                 <div className="relative">
                   <button
-                    className="flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition-all hover:bg-gray-50 hover:shadow-md"
+                    className="flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm ring-1 ring-gray-200 transition-all hover:bg-gray-50 hover:shadow-md"
                     onClick={() => setIsTimeframeOpen(!isTimeframeOpen)}
                   >
                     <FaRegCalendarAlt className="text-gray-500" />

@@ -9,4 +9,9 @@ export default defineConfig({
     react(),
     tailwindcss(), flowbiteReact()
   ],
+  base: '/', // For deploying to root domain
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  }
 })

@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaCrown, FaStar } from "react-icons/fa";
 
-function LeadershipBoard() {
+function LeadershipBoard({ lang }) {
+  const { t } = useTranslation();
+  const isRTL = lang === "ar";
   return (
     <div className="rounded-xl bg-white p-5 shadow-md">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-          <FaCrown className="text-amber-400" /> Top Performers
+          <FaCrown className="text-amber-400" /> {t(`top_performers`)}
         </h3>
         <span className="text-xs text-gray-500">This Month</span>
       </div>

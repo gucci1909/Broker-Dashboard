@@ -1,8 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBuilding, FaBullseye, FaCalendarAlt, FaChartLine, FaDollarSign, FaHandshake, FaMoneyBillAlt, FaUsers } from "react-icons/fa";
+import {
+  FaBuilding,
+  FaBullseye,
+  FaCalendarAlt,
+  FaChartLine,
+  FaHandshake,
+  FaMoneyBillAlt,
+  FaUsers,
+} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-function BottomCards() {
+function BottomCards({lang}) {
+   const { t } = useTranslation();
+    const isRTL = lang === "ar";
   const stats = [
     {
       icon: <FaUsers />,
@@ -52,16 +63,18 @@ function BottomCards() {
     {
       icon: <FaHandshake />,
       label: "Sales",
+      labelKey:"sales",
       value: "56",
       trend: "+8%",
       color: "bg-green-100",
       textColor: "text-green-600",
     },
     {
-      icon: <FaMoneyBillAlt  />,
+      icon: <FaMoneyBillAlt />,
       label: "Revenue",
+      labelKey: "revenue",
       value: "45.2k",
-      
+
       trend: "+23%",
       color: "bg-purple-100",
       textColor: "text-purple-600",
@@ -69,6 +82,7 @@ function BottomCards() {
     {
       icon: <FaCalendarAlt />,
       label: "Appointments",
+      labelKey:"appointments",
       value: "87",
       trend: "+15%",
       color: "bg-indigo-100",
@@ -88,7 +102,7 @@ function BottomCards() {
           <div className="flex items-start justify-between">
             <div>
               <p className="text-xs font-bold tracking-widest text-gray-500 uppercase">
-                {s.label}
+              {t(`stats.${s.labelKey}`)}
               </p>
               <h3 className="mt-1 text-2xl font-bold text-gray-900">
                 {s.value}

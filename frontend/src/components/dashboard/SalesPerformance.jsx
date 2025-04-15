@@ -1,8 +1,10 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
+import { useTranslation } from "react-i18next";
 
-
-function SalesPerformance() {
+function SalesPerformance({lang}) {
+  const { t } = useTranslation();
+  const isRTL = lang === "ar";
   const chartData = {
     labels: ["Leads", "Sales", "Revenue", "Clients", "Properties"],
     datasets: [
@@ -31,7 +33,7 @@ function SalesPerformance() {
     <div className="mt-5 rounded-xl bg-white p-5 shadow-lg lg:col-span-2">
       <div className="mb-5 flex items-center justify-between">
         <h3 className="text-lg font-semibold text-gray-800">
-          Sales Performance Analytics
+        {t("sales_performance")}
         </h3>
         <div className="flex gap-2">
           <select className="rounded-lg border border-gray-200 bg-white px-3 py-1 text-sm text-gray-600 outline-none">
@@ -50,7 +52,7 @@ function SalesPerformance() {
         <div className="flex flex-col">
           <div className="mb-3 flex items-center justify-between">
             <h4 className="text-sm font-medium text-gray-700">
-              Lead Conversion Funnel
+            {t("lead_conversion_funnel")}
             </h4>
             <span className="rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-600">
               {Math.round(
@@ -116,7 +118,7 @@ function SalesPerformance() {
         <div className="flex flex-col">
           <div className="mb-3 flex items-center justify-between">
             <h4 className="text-sm font-medium text-gray-700">
-              Weekly Performance Trend
+            {t("weekly_performance_trend")}
             </h4>
             <span className="rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-600">
               +14.5% vs last week

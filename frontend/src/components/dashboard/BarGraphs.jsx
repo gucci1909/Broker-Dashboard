@@ -1,12 +1,15 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
+import { useTranslation } from "react-i18next";
 
-function BarGraphs() {
+function BarGraphs({lang}) {
+  const { t } = useTranslation();
+    const isRTL = lang === "ar";
   return (
     <div className="rounded-xl bg-white p-5 shadow-md">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-800">
-          Monthly Deal Performance
+        {t(`monthly_deal_performance`)}
         </h3>
         <select className="rounded-md border border-gray-200 bg-white px-2 py-1 text-xs text-gray-600 outline-none">
           <option>2023</option>
@@ -84,7 +87,7 @@ function BarGraphs() {
       {/* User Feedback Section */}
       <div className="mt-6">
         <h3 className="mb-3 text-sm font-semibold text-gray-800">
-          User Feedback
+        {t(`user_feedback`)}
         </h3>
         <div className="h-[300px] overflow-y-auto rounded-lg border border-gray-100 p-2">
           {[

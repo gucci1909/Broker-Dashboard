@@ -1,12 +1,15 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { FaTasks } from "react-icons/fa";
 
-function MyTasks() {
+function MyTasks({ lang }) {
+  const { t } = useTranslation();
+  const isRTL = lang === "ar";
   return (
     <div className="rounded-xl bg-white p-5 shadow-md">
       <div className="mb-3 flex items-center justify-between">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-          <FaTasks className="text-blue-500" /> My Tasks
+          <FaTasks className="text-blue-500" /> {t(`my_tasks`)}
         </h3>
         <button className="text-xs text-blue-500 hover:text-blue-700">
           + Add Task

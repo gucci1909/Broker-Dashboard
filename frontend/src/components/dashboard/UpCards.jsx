@@ -1,12 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaBuilding, FaBullseye, FaCalendarAlt, FaChartLine, FaDollarSign, FaHandshake, FaUsers } from "react-icons/fa";
+import {
+  FaBuilding,
+  FaBullseye,
+  FaCalendarAlt,
+  FaChartLine,
+  FaDollarSign,
+  FaHandshake,
+  FaUsers,
+} from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-function UpCards() {
+function UpCards({ lang }) {
+  const { t } = useTranslation();
+  const isRTL = lang === "ar";
+
   const stats = [
     {
       icon: <FaUsers />,
       label: "CLIENT ACQUISITION",
+      labelKey: "client_acquisition",
       value: "134",
       trend: "+5%",
       comparison: "Up from 127 last month",
@@ -19,6 +32,7 @@ function UpCards() {
     {
       icon: <FaBuilding />,
       label: "PROPERTIES",
+      labelKey: "properties",
       value: "42",
       trend: "-3%",
       comparison: "Down from 43 last quarter",
@@ -31,6 +45,7 @@ function UpCards() {
     {
       icon: <FaBullseye />,
       label: "TARGET RATE",
+      labelKey: "target_rate",
       value: "78%",
       trend: "+4%",
       comparison: "Exceeding expectations",
@@ -44,6 +59,7 @@ function UpCards() {
     {
       icon: <FaChartLine />,
       label: "Leads",
+      labelKey: "leads",
       value: "248",
       trend: "+12%",
       color: "bg-blue-100",
@@ -52,6 +68,7 @@ function UpCards() {
     {
       icon: <FaHandshake />,
       label: "Sales",
+      labelKey: "sales",
       value: "56",
       trend: "+8%",
       color: "bg-green-100",
@@ -60,6 +77,7 @@ function UpCards() {
     {
       icon: <FaDollarSign />,
       label: "Revenue",
+      labelKey: "revenue",
       value: "$12.3k",
       trend: "+23%",
       color: "bg-purple-100",
@@ -68,6 +86,7 @@ function UpCards() {
     {
       icon: <FaCalendarAlt />,
       label: "Appointments",
+      labelKey: "appointments",
       value: "87",
       trend: "+15%",
       color: "bg-indigo-100",
@@ -75,18 +94,22 @@ function UpCards() {
     },
   ];
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div
+      className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ${isRTL ? "rtl" : "ltr"}`}
+    >
       {stats.slice(0, 4).map((s, i) => (
         <motion.div
           key={i}
-          className="cursor-pointer rounded-xl bg-white p-5 shadow-lg transition-all hover:shadow-xl"
+          className={`cursor-pointer rounded-xl bg-white p-5 shadow-lg transition-all hover:shadow-xl ${isRTL ? "text-right" : "text-left"}`}
           whileHover={{ y: -8, scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <div className="flex items-start justify-between">
+          <div
+            className={`flex items-start justify-between`}
+          >
             <div>
               <p className="text-xs font-bold tracking-widest text-gray-500 uppercase opacity-80">
-                {s.label}
+                {t(`stats.${s.labelKey}`)}
               </p>
               <h3 className="mt-2 text-2xl font-bold text-gray-900">
                 {s.value}

@@ -1,13 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaBullhorn } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-function Announcements() {
+function Announcements({ lang }) {
+  const { t } = useTranslation();
+  const isRTL = lang === "ar";
   return (
     <div className="rounded-xl bg-white p-5 shadow-md">
       <div className="mb-4 flex items-center justify-between">
         <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-800">
-          <FaBullhorn className="text-blue-500" /> Announcements
+          <FaBullhorn className="text-blue-500" /> {t(`announcements`)}
         </h3>
         <span className="cursor-pointer text-xs text-blue-500">View All</span>
       </div>
